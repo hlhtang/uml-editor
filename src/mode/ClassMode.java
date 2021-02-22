@@ -8,7 +8,7 @@ import shape.ClassObj;
 import mainComponent.Canvas;
 import panel.CanvasPanel;
 
-public class ClassMode extends Mode{
+public class ClassMode extends Mode {
 	private Point point = null;
 	private final int width = 100;
 	private final int height = 120;

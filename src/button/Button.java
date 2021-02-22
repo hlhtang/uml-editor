@@ -9,7 +9,7 @@ import java.awt.*;
 import panel.ButtonPanel;
 import panel.CanvasPanel;
 
-public class Button extends JButton implements ActionListener{
+public class Button extends JButton implements ActionListener {
 	private boolean isSelected = false;
 	
 	public Button(String name) {

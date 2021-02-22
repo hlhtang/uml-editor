@@ -2,7 +2,7 @@ package button;
 import javax.swing.*;
 import java.awt.event.*;
 
-public class FileButton extends JMenu{
+public class FileButton extends JMenu {
 	private JMenuItem exitItem;
 	
 	public FileButton(String name) {

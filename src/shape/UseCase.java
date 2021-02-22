@@ -4,7 +4,7 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Point;
 
-public class UseCase extends BasicObj{
+public class UseCase extends BasicObj {
 	private final int width = 120;
 	private final int height = 100;
 	private final int portOffset = 10;

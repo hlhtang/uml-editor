@@ -66,6 +66,5 @@ public class GeneralizationLine extends BasicLine {
 		g2d.drawLine(p.x, p.y, (int)arrow1X, (int)arrow1Y);
 		g2d.drawLine(p.x, p.y, (int)arrow2X, (int)arrow2Y);
 		g2d.drawLine((int)arrow1X, (int)arrow1Y, (int)arrow2X, (int)arrow2Y);
-	}
-	
+	}	
 }

@@ -8,7 +8,7 @@ import panel.CanvasPanel;
 import shape.Shape;
 import shape.UseCase;
 
-public class UseCaseMode extends Mode{
+public class UseCaseMode extends Mode {
 	private Point point = null;
 	private final int width = 120;
 	private final int height = 100;

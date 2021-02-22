@@ -2,7 +2,7 @@ package shape;
 
 import java.awt.Point;
 
-public class Port{
+public class Port {
 	private BasicObj parent;
 	private Point p;
 	

@@ -10,8 +10,8 @@ import java.util.ArrayList;
 
 import mainComponent.Canvas;
 
-public class GroupObj extends Shape{
-	private Point center; // center¦bGroupObj¬O«üªø¤è§Îªº¥ª¤W¤è®y¼Ð
+public class GroupObj extends Shape {
+	private Point center; // centeråœ¨GroupObjæ˜¯æŒ‡é•·æ–¹å½¢çš„å·¦ä¸Šæ–¹åº§æ¨™
 	private int width;
 	private int height;
 	private int distanceX;

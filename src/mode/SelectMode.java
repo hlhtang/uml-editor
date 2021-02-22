@@ -10,10 +10,10 @@ import src.ChooseRect;
 import mainComponent.Canvas;
 import panel.CanvasPanel;
 
-public class SelectMode extends Mode{
+public class SelectMode extends Mode {
 	private Point point = null;
-	private boolean isSelectOnObject = false; // ¥Î©ó½u¡B¿ï¨ú¤è§Îªº§PÂ_
-	private boolean isDragging = false; // ¥Î©ó½u¡B¿ï¨ú¤è§Îªº§PÂ_
+	private boolean isSelectOnObject = false; // ç”¨æ–¼ç·šã€é¸å–æ–¹å½¢çš„åˆ¤æ–·
+	private boolean isDragging = false; // ç”¨æ–¼ç·šã€é¸å–æ–¹å½¢çš„åˆ¤æ–·
 
 	@Override
 	public void mousePressed(MouseEvent e) {	
@@ -22,13 +22,13 @@ public class SelectMode extends Mode{
 		Canvas.getCanvas().setSelectSourceLocation(new Point());
 		Canvas.getCanvas().setSelectDestinationLocation(new Point());
 				
-		// ±N©Ò¦³ª«¥óªºIsSelectedª¬ºA³]¬°false
+		// å°‡æ‰€æœ‰ç‰©ä»¶çš„IsSelectedç‹€æ…‹è¨­ç‚ºfalse
 		for(Shape obj: Canvas.getCanvas().getObjectList())
 			obj.setIsSelected(false);
-		// ±N¿ï¨ú¦h­Óª«¥óªº°}¦C±q·sªì©l¤Æ
+		// å°‡é¸å–å¤šå€‹ç‰©ä»¶çš„é™£åˆ—å¾æ–°åˆå§‹åŒ–
 		if(Canvas.getCanvas().getSelectedObjsArray().size() > 0)
 			Canvas.getCanvas().setSelectedObjsArray(new ArrayList<Integer>());
-		// §PÂ_ª«¥ó¦³µL­«Å|:
+		// åˆ¤æ–·ç‰©ä»¶æœ‰ç„¡é‡ç–Š:
 		ArrayList<Integer> overlapObjs = new ArrayList<>();
 		for(Shape obj: Canvas.getCanvas().getObjectList()) {
 			if(isPressed(point, obj) == true && obj.getIsGrouped() == false)
@@ -44,7 +44,7 @@ public class SelectMode extends Mode{
 			}	
 		}
 		
-		// ­YÂI¿ï¦ì¸m¤£¦bª«¥ó¤W¡A§ì¨ú³o­Ó®y¼Ğ
+		// è‹¥é»é¸ä½ç½®ä¸åœ¨ç‰©ä»¶ä¸Šï¼ŒæŠ“å–é€™å€‹åº§æ¨™
 		if(isSelectOnObject == false)
 			Canvas.getCanvas().setSelectSourceLocation(new Point(point.x, point.y));
 		Canvas.getCanvas().repaint();
@@ -53,9 +53,9 @@ public class SelectMode extends Mode{
 	@Override
 	public void mouseDragged(MouseEvent e) {
 		point = e.getPoint();
-  	  	// ­YMousePressedªº®y¼Ğ¦bª«¥ó¸Ì
+  	  	// è‹¥MousePressedçš„åº§æ¨™åœ¨ç‰©ä»¶è£¡
   	  	if(isSelectOnObject == true) {
-  	  		// ­YMousePressedªº®y¼Ğ¦bª«¥ó¸Ì
+  	  		// è‹¥MousePressedçš„åº§æ¨™åœ¨ç‰©ä»¶è£¡
   	  		for(Shape obj: Canvas.getCanvas().getObjectList()) {
   	  			if(obj.getIsSelected() == true && obj.getIsGrouped() == false) {
   	  				obj.setCenter(new Point(point.x - obj.getWidth()/2, point.y - obj.getHeight()/2));
@@ -64,11 +64,11 @@ public class SelectMode extends Mode{
   	  			}
   	  		}
   	  	}
-  	  	// ­YMousePressedªº®y¼Ğ¤£¦b¥ô¦óª«¥ó¸Ì
+  	  	// è‹¥MousePressedçš„åº§æ¨™ä¸åœ¨ä»»ä½•ç‰©ä»¶è£¡
   	  	if(isSelectOnObject == false) {
   	  		isDragging = true;
   	  		Canvas.getCanvas().setSelectDestinationLocation(new Point(point.x, point.y));
-  	  		// Drag¥X¤@­Ó¿ï¨ú¤è§Î
+  	  		// Dragå‡ºä¸€å€‹é¸å–æ–¹å½¢
   	  		Canvas.getCanvas().setChooseRect(
   	  				new ChooseRect(Canvas.getCanvas().getSelectSourceLocation(), 
   	  						       Canvas.getCanvas().getSelectDestinationLocation()));
@@ -79,9 +79,9 @@ public class SelectMode extends Mode{
 	@Override
 	public void mouseReleased(MouseEvent e) {
 		point = e.getPoint();
-		// ¿ï¨ú¤è§Î:
+		// é¸å–æ–¹å½¢:
 		if(isDragging == true) {
-			// §PÂ_¦³µL¿ï¨ú¨ìª«¥ó¥B¨ä¥¼³QGroup
+			// åˆ¤æ–·æœ‰ç„¡é¸å–åˆ°ç‰©ä»¶ä¸”å…¶æœªè¢«Group
 			for(Shape obj: Canvas.getCanvas().getObjectList()) {
 				if(obj.getCenter().x + obj.getWidth() <= Canvas.getCanvas().getChooseRect().getTopRight().getX() &&
 				   obj.getCenter().x >= Canvas.getCanvas().getChooseRect().getTopLeft().getX() &&
@@ -89,7 +89,7 @@ public class SelectMode extends Mode{
 				   obj.getCenter().y >= Canvas.getCanvas().getChooseRect().getTopLeft().getY() &&
 				   obj.getIsGrouped() == false) {
 					 obj.setIsSelected(true);
-					 // ¥[¶i¿ï¨ú¤è§Î
+					 // åŠ é€²é¸å–æ–¹å½¢
 					 Canvas.getCanvas().getSelectedObjsArray().add(Canvas.getCanvas().getObjectList().indexOf(obj));	
 				}
 			}

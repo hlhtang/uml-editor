@@ -4,9 +4,9 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Point;
 
-public class GeneralizationLine extends BasicLine{
-	private double arrowCenterX; // µÙ§Î¤¤¤ßÂI
-	private double arrowCenterY; // µÙ§Î¤¤¤ßÂI
+public class GeneralizationLine extends BasicLine {
+	private double arrowCenterX; // è±å½¢ä¸­å¿ƒé»
+	private double arrowCenterY; // è±å½¢ä¸­å¿ƒé»
 	
 	public GeneralizationLine(Port port) {
 		super(port);
@@ -33,14 +33,14 @@ public class GeneralizationLine extends BasicLine{
 	}
 	
 	private void drawArrow(Graphics2D g2d, Point p) {
-		double vectorX = (ports[1].getPoint().x - ports[0].getPoint().x); // °_ÂI¨ì²×ÂIªº¶ZÂ÷
-		double vectorY = (ports[1].getPoint().y - ports[0].getPoint().y); // °_ÂI¨ì²×ÂIªº¶ZÂ÷
-		// µÙ§Î¤¤¤ßÂI
+		double vectorX = (ports[1].getPoint().x - ports[0].getPoint().x); // èµ·é»åˆ°çµ‚é»çš„è·é›¢
+		double vectorY = (ports[1].getPoint().y - ports[0].getPoint().y); // èµ·é»åˆ°çµ‚é»çš„è·é›¢
+		// è±å½¢ä¸­å¿ƒé»
 		arrowCenterX = ports[1].getPoint().x - 
 							vectorX*(10/Math.sqrt(Math.pow(vectorX, 2) + Math.pow(vectorY, 2)));
 		arrowCenterY = ports[1].getPoint().y - 
 							vectorY*(10/Math.sqrt(Math.pow(vectorX, 2) + Math.pow(vectorY, 2)));
-		// µÙ§Î¥ª¥k¨âÂI®y¼Ğ
+		// è±å½¢å·¦å³å…©é»åº§æ¨™
 		double arrow1X = arrowCenterX - vectorY*(10/Math.sqrt(Math.pow(vectorX, 2) + Math.pow(vectorY, 2)));
 		double arrow1Y = arrowCenterY + vectorX*(10/Math.sqrt(Math.pow(vectorX, 2) + Math.pow(vectorY, 2)));
 		double arrow2X = arrowCenterX + vectorY*(10/Math.sqrt(Math.pow(vectorX, 2) + Math.pow(vectorY, 2)));
@@ -51,14 +51,14 @@ public class GeneralizationLine extends BasicLine{
 	}
 	
 	private void drawDraggingArrow(Graphics2D g2d, Point p) {
-		double vectorX = (draggingPoint.x - ports[0].getPoint().x); // °_ÂI¨ì²×ÂIªº¶ZÂ÷
-		double vectorY = (draggingPoint.y - ports[0].getPoint().y); // °_ÂI¨ì²×ÂIªº¶ZÂ÷
-		// µÙ§Î¤¤¤ßÂI
+		double vectorX = (draggingPoint.x - ports[0].getPoint().x); // èµ·é»åˆ°çµ‚é»çš„è·é›¢
+		double vectorY = (draggingPoint.y - ports[0].getPoint().y); // èµ·é»åˆ°çµ‚é»çš„è·é›¢
+		// è±å½¢ä¸­å¿ƒé»
 		arrowCenterX = draggingPoint.x - 
 							vectorX*(10/Math.sqrt(Math.pow(vectorX, 2) + Math.pow(vectorY, 2)));
 		arrowCenterY = draggingPoint.y - 
 							vectorY*(10/Math.sqrt(Math.pow(vectorX, 2) + Math.pow(vectorY, 2)));
-		// µÙ§Î¥ª¥k¨âÂI®y¼Ğ
+		// è±å½¢å·¦å³å…©é»åº§æ¨™
 		double arrow1X = arrowCenterX - vectorY*(10/Math.sqrt(Math.pow(vectorX, 2) + Math.pow(vectorY, 2)));
 		double arrow1Y = arrowCenterY + vectorX*(10/Math.sqrt(Math.pow(vectorX, 2) + Math.pow(vectorY, 2)));
 		double arrow2X = arrowCenterX + vectorY*(10/Math.sqrt(Math.pow(vectorX, 2) + Math.pow(vectorY, 2)));

@@ -5,7 +5,7 @@ import java.awt.Graphics;
 import java.awt.Point;
 import java.util.ArrayList;
 
-public abstract class Shape extends JComponent{
+public abstract class Shape extends JComponent {
 	protected boolean isGrouped;
 	
 	public Shape() {}

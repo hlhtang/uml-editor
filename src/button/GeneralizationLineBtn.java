@@ -3,7 +3,7 @@ import mode.GeneralizationLineMode;
 import mode.Mode;
 import mode.SelectMode;
 
-public class GeneralizationLineBtn extends Button{
+public class GeneralizationLineBtn extends Button {
 	private Mode generalizationLineMode = new GeneralizationLineMode();
 	
 	public GeneralizationLineBtn(String name) {

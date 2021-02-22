@@ -10,7 +10,7 @@ import shape.BasicObj;
 import shape.GroupObj;
 import shape.Shape;
 
-public class EditButton extends JMenu{
+public class EditButton extends JMenu {
 	private JMenuItem groupItem;
 	private JMenuItem ungroupItem;
 	private JMenuItem renameItem;
@@ -20,14 +20,14 @@ public class EditButton extends JMenu{
 		groupItem = new JMenuItem("Group");
 		groupItem.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				// ³]©w·¥¤j¡B·¥¤pªºsource¡Bdestination®y¼Ğ¨Ó¤è«K¥¼¨Ó§ó·ssource¡Bdestination®y¼Ğ­È
+				// è¨­å®šæ¥µå¤§ã€æ¥µå°çš„sourceã€destinationåº§æ¨™ä¾†æ–¹ä¾¿æœªä¾†æ›´æ–°sourceã€destinationåº§æ¨™å€¼
 				Point source = new Point(10000, 10000);
 				Point destination = new Point(0, 0);
 				int width;
 				int height;
-				// ­Y¿ï¨ú¤è§Î¤º¦³¥ô¦óª«¥ó:
+				// è‹¥é¸å–æ–¹å½¢å…§æœ‰ä»»ä½•ç‰©ä»¶:
 				if(Canvas.getCanvas().getSelectedObjsArray().size() > 0) {
-					// §PÂ_¦³µLBasicCaseªº®y¼Ğ¯à®³¨Ó§ó·s¦Ü§Y±N·s¼WªºCompositeª«¥óªº®y¼Ğ
+					// åˆ¤æ–·æœ‰ç„¡BasicCaseçš„åº§æ¨™èƒ½æ‹¿ä¾†æ›´æ–°è‡³å³å°‡æ–°å¢çš„Compositeç‰©ä»¶çš„åº§æ¨™
 					for(Integer index: Canvas.getCanvas().getSelectedObjsArray()) {
 						Canvas.getCanvas().getObjectList().get(index).setIsGrouped(true);
 						Canvas.getCanvas().getObjectList().get(index).setIsSelected(false);

@@ -4,7 +4,7 @@ import java.awt.Graphics;
 import java.awt.Point;
 import java.util.ArrayList;
 
-public class BasicObj extends Shape{
+public class BasicObj extends Shape {
 	protected String name = new String("No Name");
 	protected Point center = null;
 	protected int width;

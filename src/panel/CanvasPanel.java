@@ -3,7 +3,7 @@ import javax.swing.*;
 import java.awt.*;
 import mainComponent.Canvas;
 
-public class CanvasPanel extends JPanel{
+public class CanvasPanel extends JPanel {
 
 	public CanvasPanel() {
 		BorderLayout layout = new BorderLayout();

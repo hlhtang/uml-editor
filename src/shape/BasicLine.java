@@ -4,7 +4,7 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Point;
 
-public class BasicLine extends Shape{
+public class BasicLine extends Shape {
 	protected boolean isCreated;
 	protected boolean isDragging;
 	protected boolean isFinished;
@@ -12,7 +12,7 @@ public class BasicLine extends Shape{
 	protected Port[] ports = new Port[2];
 	
 	public BasicLine(Port port) {
-		// ½u³Qªì©l¤Æ®É°_²×ÂI¤@¼Ë
+		// ç·šè¢«åˆå§‹åŒ–æ™‚èµ·çµ‚é»ä¸€æ¨£
 		ports[0] = port;
 		ports[1] = port;
 	}

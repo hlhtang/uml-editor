@@ -9,7 +9,7 @@ import shape.BasicObj;
 import shape.Port;
 import shape.Shape;
 
-public class AssociationLineMode extends Mode{
+public class AssociationLineMode extends Mode {
 	private Point point = null;
 	private Port port;
 	private boolean releaseOnObj = false;
@@ -55,7 +55,7 @@ public class AssociationLineMode extends Mode{
 					try{
 						if(isPressed(point, obj) == true){
 							port = getDestinationLineLocation(point, (BasicObj) obj); 
-							if(!line.getPort(0).getParent().equals(obj)) { // �קK�ۤv�s��ۤv
+							if(!line.getPort(0).getParent().equals(obj)) { // Á×§K¦Û¤v³s¨ì¦Û¤v
 								line.setPorts(port, 1);
 								line.setIsFinished(true);
 								line.setIsDragging(false);

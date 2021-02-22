@@ -7,7 +7,7 @@ import java.awt.*;
 import button.FileButton;
 import button.EditButton;
 
-public class TopPanel extends JPanel{
+public class TopPanel extends JPanel {
 	private FileButton fileButton;
 	private EditButton editButton;
 	private JMenuBar bar;

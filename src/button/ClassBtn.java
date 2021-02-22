@@ -4,7 +4,7 @@ import mode.ClassMode;
 import mode.Mode;
 import mode.SelectMode;
 
-public class ClassBtn extends Button{
+public class ClassBtn extends Button {
 	private Mode classMode = new ClassMode();
 	
 	public ClassBtn(String name) {

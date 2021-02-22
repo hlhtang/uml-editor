@@ -3,7 +3,7 @@ import java.awt.Point;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
-//import java.awt.event.MouseAdapter;¡F
+//import java.awt.event.MouseAdapter;Â¡F
 //import java.awt.event.MouseMotionAdapter;
 
 import mainComponent.Canvas;
@@ -11,7 +11,7 @@ import shape.BasicObj;
 import shape.Port;
 import shape.Shape;
 
-public abstract class Mode implements MouseListener, MouseMotionListener{
+public abstract class Mode implements MouseListener, MouseMotionListener {
 
 	public void mousePressed(MouseEvent e) {
 	}

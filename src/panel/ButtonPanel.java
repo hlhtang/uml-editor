@@ -11,11 +11,11 @@ import button.UseCaseBtn;
 import mode.Mode;
 import mode.SelectMode;
 
-public class ButtonPanel extends JPanel{
+public class ButtonPanel extends JPanel {
 	public static ArrayList<Button> buttonList = new ArrayList();
 	
 	public ButtonPanel() {
-		// ³]©wpanel¤WÂ\³]componentsªº¯d¥ÕÃä½t
+		// Â³]Â©wpanelÂ¤WÃ‚\Â³]componentsÂªÂºÂ¯dÂ¥Ã•ÃƒÃ¤Â½t
 		this.setBorder(BorderFactory.createEmptyBorder(10,10,10,10));
 		this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
 		
@@ -35,7 +35,7 @@ public class ButtonPanel extends JPanel{
 			this.add(btn);
 	}
 
-	public static Mode getMode(){
+	public static Mode getMode() {
 		for(Button btn: buttonList) {
 			if(btn.getIsSelected() == true)
 				return btn.getMode();

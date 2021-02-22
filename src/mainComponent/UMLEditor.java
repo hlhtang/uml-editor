@@ -5,7 +5,7 @@ import panel.TopPanel;
 import panel.ButtonPanel;
 import panel.CanvasPanel;
 
-public class UMLEditor extends JFrame{
+public class UMLEditor extends JFrame {
 	private TopPanel topPanel;
 	private ButtonPanel buttonPanel;
 	private CanvasPanel canvasPanel;
